@@ -8,8 +8,59 @@
     <script src="minesweeper.js"></script>
   </head>
   <body>
-    <div id="message"></div>
-    <div id="notes"></div>
+    <div id= "intro" class= "gameIntro">
+      <div class= "introHeader"><h1>CSGoBomb Sweeper</h1>
+        <img src="images/csgo-bomb.gif" alt= "GoSweeper Logo" class= "introLogo" width= "150px" height= "150px"/>
+      </div>
+      <div class= "selectBoard"><h1>Select Your Board</h1>
+        <div class= "buttonContainers">
+          <button class= "gameButton" onclick= "startBoard(3)">3 x 3</button>
+          <button class= "gameButton" onclick= "startBoard(4)">4 x 4</button>
+          <button class= "gameButton" onclick= "startBoard(5)">5 x 5</button>
+          <button class= "gameButton" onclick= "startBoard(6)">6 x 6</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="gameInstructions">
+      <h1>CSGoBomb Game Instructions</h1>
+      <ul>
+        <li>Goal is to mark all Terrorist Bomb by RIGHT clicking on the box</li>
+        <li>Opening box areas that contain no bomb can be looked at by a LEFT click on your mouse</li>
+        <li>Left clicking your mouse will give you a number which can be a hint on your next move</li>
+        <li>You lose and die in the game if you click on a planted bomb</li>
+        <li>You won the game if you open all the hidden boxes and mark all the bombs</li>
+      </ul>
+    </div>
+
+    <audio id= "startGame">
+      <source src="media/start-game-bomb-planted.mp3"/>
+    </audio>
+    <audio id= "cheerSound">
+      <source src="media/cheer-sound-click-number.mp3"/>
+    </audio>
+    <audio id= "markingBomb">
+      <source src="media/marking-bomb.mp3"/>
+    </audio>
+    <audio id= "loseGame">
+      <source src="media/lose game-terrorist-wins.mp3"/>
+    </audio>
+    <audio id= "winGame">
+      <source src="media/win-game-sound.mp3"/>
+    </audio>
+
+    <div id= "message">
+      <button id= "resetGame" class= "hide resetGameBtn" onclick= "location.reload()"> Reset Game</button>
+    </div>
+      
+    <div id= "notes">
+      <div>
+        <p>
+          <span id="totalBombs"></span><span id="bombsRemaining"></span>
+        </p>
+        <button id= "remainingMinesButton" class= "hide remainingBombBtn" >Remaining terrorist bomb</button>
+      </div>
+    </div>
     <div class="board"></div>
   </body>
 </html>

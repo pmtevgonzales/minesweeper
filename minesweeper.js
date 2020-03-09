@@ -1,10 +1,31 @@
-document.addEventListener('DOMContentLoaded', startGame)
+//document.addEventListener('DOMContentLoaded', startGame)
 
 // Define your `board` object here!
-// var board = 
+var board = {}
+
+function startBoard (num) {
+  board.cells = []
+  for (var i = 0; i < num; i++) {
+    for (var j = 0; j< num; j++) {
+      board.cells.push ({ 
+        row: i, 
+        col: j, 
+        isMine: Math.random() <= 0.3, 
+        hidden: true
+      })
+    }
+  }
+  startGame();
+}
+
+function hideIntro() {
+  const intro = document.getElementById("intro");
+  intro.classList.add("hide");
+}
 
 function startGame () {
   // Don't remove this function call: it makes the game work!
+  hideIntro();
   lib.initBoard()
 }
 
