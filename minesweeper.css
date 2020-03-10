@@ -1,6 +1,6 @@
 html, body {
   height: 100%;
-  font-family: 'Open Sans', sans-serif
+  font-family: 'Lato';
 }
 
 body {
@@ -8,6 +8,13 @@ body {
   align-items: center;
   justify-content: flex-center;
   flex-direction: column;
+  background: seashell;
+  background-size: auto;
+}
+
+ul {
+  list-style-type: square;
+  margin-block-start: 0.1em;
 }
 
 #message, #notes {
@@ -18,6 +25,12 @@ body {
 
 #message {
   font-size: 1.5rem;
+  padding-top: 2rem;
+  color: azure;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 2rem;
+  text-shadow: 2px 2px 8px #000000;
 }
 
 .gameIntro {
@@ -29,10 +42,10 @@ body {
 }
 
 .introHeader {
-  font-family: monospace;
+  font-family: 'Dandeleon';
   font-size: 4rem;
   font-weight: bold;
-  text-transform: uppercase;
+  text-transform: capitalize;
   text-align: center;
   margin-bottom: 1.5rem;
   color: #e0dfdc;
@@ -84,12 +97,21 @@ body {
   display: inline-block;
   cursor: pointer;
   color: #ffffff;
-  font-family: Arial;
+  font-family: 'Lato';
   font-size: 17px;
   padding: 20px 20px 20px 20px;
   margin-top: 50px;
   text-decoration: none;
   text-shadow: 0px 1px 0px #810e05;
+}
+
+.myButton:hover {
+  background: linear-gradient(to bottom, #f24437 5%, #c62d1f 100%);
+  background-color: #f24437;
+}
+.myButton:active {
+  position: relative;
+  top: 1px;
 }
 
 .board {
@@ -113,17 +135,80 @@ body {
 
 .board div:hover {
   background-color: white;
+  cursor: pointer;
 }
 
 .hide {
   display: none;
 }
+
+.resetGameBtn {
+  box-shadow: inset 0px 1px 0px 0px #f9eca0;
+  background: linear-gradient(to bottom, #f0c911 5%, #f2ab1e 100%);
+  background-color: #f0c911;
+  border-radius: 6px;
+  border: 1px solid #e65f44;
+  display: inline-block;
+  cursor: pointer;
+  color: #c92200;
+  font-family: 'Lato';
+  font-size: 15px;
+  font-weight: bold;
+  padding: 6px 24px;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #ded17c;
+  margin-bottom: 1.5rem;
+  animation: fadein 0.3s ease;
+}
+
+.resetGameBtn:hover {
+  background: linear-gradient(to bottom, #f2ab1e 5%, #f0c911 100%);
+  background-color: #f2ab1e;
+}
+
+.resetGameBtn:active {
+  position: relative;
+  top: 1px;
+}
+
+.remainingBombBtn {
+  box-shadow: inset 0px 1px 0px 0px #f9eca0;
+  background: linear-gradient(to bottom, #f0c911 5%, #f2ab1e 100%);
+  background-color: #f0c911;
+  border-radius: 6px;
+  border: 1px solid #e65f44;
+  display: inline-block;
+  cursor: pointer;
+  color: #c92200;
+  font-family: 'Lato';
+  font-size: 15px;
+  font-weight: bold;
+  padding: 6px 24px;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #ded17c;
+  margin-bottom: 1.5rem;
+  animation: fadein 0.3s ease;
+}
+
+.remainingBombBtn:hover {
+  background: linear-gradient(to bottom, #f2ab1e 5%, #f0c911 100%);
+  background-color: #f2ab1e;
+}
+
+.remainingBombBtn:active {
+  position: relative;
+  top: 1px;
+}
+
 div.mine, div.mine:hover {
   background: no-repeat center/60% url("images/bomb.svg") darkred;
 }
 
 div.hidden {
   background: #eee;
+  position: relative;
 }
 
 div.hidden:hover {
@@ -132,4 +217,36 @@ div.hidden:hover {
 
 div.marked, div.marked:hover {
   background: no-repeat center/60% url("images/mark.svg") darkolivegreen;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes dropin {
+  from {
+    transform: translateY(-40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes scaling {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(2.2);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
