@@ -1,115 +1,92 @@
 html, body {
   height: 100%;
-  font-family: 'Lato';
+  font-family:'Lato';
 }
 
 body {
   display: flex;
   align-items: center;
-  justify-content: flex-center;
   flex-direction: column;
   background: seashell;
   background-size: auto;
 }
 
-ul {
-  list-style-type: square;
-  margin-block-start: 0.1em;
-}
-
-#message, #notes {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-#message {
-  font-size: 1.5rem;
-  padding-top: 2rem;
-  color: azure;
-  text-transform: uppercase;
-  font-weight: 900;
-  font-size: 2rem;
-  text-shadow: 2px 2px 8px #000000;
-}
-
 .gameIntro {
-  padding-top: 10rem;
-  min-height: 50px;
+  padding-top: 5rem;
   color: Black;
   display: flex;
   flex-direction: column;
 }
 
 .introHeader {
-  font-family: 'Dandeleon';
-  font-size: 4rem;
-  font-weight: bold;
-  text-transform: capitalize;
+  font-family: 'Luckiest Guy';
+  font-size: 3rem;
   text-align: center;
-  margin-bottom: 1.5rem;
-  color: #e0dfdc;
+  margin: 15px 50px 25px 100px;
+  color: darkslategrey;
   letter-spacing: 0.1em;
-  text-shadow: 0 -1px 0 #fff, 0 1px 0 #2e2e2e, 0 2px 0 #2c2c2c, 0 3px 0 #2a2a2a,
-    0 4px 0 #282828, 0 5px 0 #262626, 0 6px 0 #242424,
-    -13px -37px 3px rgba(206, 89, 55, 0);
-  animation: dropin 0.5s ease;
+  text-shadow: 5px 5px 10px darkolivegreen;
 }
 
-.introLogo {
+.gameInstructions h1 {
+  text-shadow: 5px 5px 10px darkolivegreen;
+}
+
+.gameInstructions {
+  text-align: center;
+  border-top-width: medium;
+  margin: 15px 50px 75px 100px;
+  font-size: medium;
+  color: darkslategrey;
+}
+
+ul {
+  list-style-type: none;
+  align-content: center;
+}
+
+.gameRules {
+  text-align: center;
+  font-size: large;
+  color: darkslategrey;
+  text-indent: inherit;
+}
+
+.csGoLogo {
   align-self: center;
+  width: 20%;
   margin-bottom: 1.5rem;
-  animation: fadein 0.3s ease 0.5s;
-  animation-fill-mode: both;
 }
 
 .selectBoard {
   text-align: center;
   margin-bottom: 1rem;
-  font-size: 1.5rem;
-  color: #ffffff;
-  text-shadow: 2px 2px 0 black;
-  animation: fadein 0.3s ease 0.5s;
-  animation-fill-mode: both;
-}
-
-.buttonContainers {
-  margin: 0 auto 2rem;
-  animation: fadein 0.3s ease 0.5s;
-  animation-fill-mode: both;
-}
-
-.gameInstructions {
-  margin-bottom: 1rem;
-  font-size: 1rem;
-  color: #ffffff;
-  text-shadow: 2px 2px 0 black;
-  animation: fadein 0.3s ease 0.5s;
-  animation-fill-mode: both;
+  font-size: medium;
+  color: darkslategrey;
+  text-shadow: 5px 5px 10px darkolivegreen;
 }
 
 .gameButton {
-  box-shadow: 1px 2px 0px 0px #8a2a21;
-  background: linear-gradient(to bottom, #c62d1f 5%, #f24437 100%);
-  background-color: #c62d1f;
+  background: darkolivegreen;
+  background-color: darkslategrey;
   border-radius: 18px;
-  border: 1px solid #d02718;
+  border: 1px solid darkolivegreen;
   display: inline-block;
   cursor: pointer;
   color: #ffffff;
-  font-family: 'Lato';
+  font-family:'Lato';
   font-size: 17px;
-  padding: 20px 20px 20px 20px;
-  margin-top: 50px;
+  padding: 10px 20px 10px 20px;
+  margin-top: 25px;
   text-decoration: none;
-  text-shadow: 0px 1px 0px #810e05;
+  text-shadow: 0px 1px 0px floralwhite;
 }
 
-.myButton:hover {
-  background: linear-gradient(to bottom, #f24437 5%, #c62d1f 100%);
-  background-color: #f24437;
+.gameButton:hover {
+  background: linear-gradient(to bottom, tan 5%, tan 100%);
+  background-color: saddlebrown;
 }
-.myButton:active {
+.gameButton:active {
   position: relative;
   top: 1px;
 }
@@ -138,26 +115,41 @@ ul {
   cursor: pointer;
 }
 
+#message {
+  font-size: 1.5rem;
+  padding-top: 2rem;
+  color: azure;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 2rem;
+  text-shadow: 2px 2px 8px #000000;
+}
+
+#message, #notes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .hide {
   display: none;
 }
 
 .resetGameBtn {
-  box-shadow: inset 0px 1px 0px 0px #f9eca0;
-  background: linear-gradient(to bottom, #f0c911 5%, #f2ab1e 100%);
-  background-color: #f0c911;
+  background: tan;
+  background-color: tan;
   border-radius: 6px;
-  border: 1px solid #e65f44;
+  border: 2px solid peru;
   display: inline-block;
   cursor: pointer;
-  color: #c92200;
-  font-family: 'Lato';
+  color: darkolivegreen;
+  font-family:'Lato';
   font-size: 15px;
   font-weight: bold;
   padding: 6px 24px;
   text-transform: uppercase;
   text-decoration: none;
-  text-shadow: 0px 1px 0px #ded17c;
+  text-shadow: darkslategrey;
   margin-bottom: 1.5rem;
   animation: fadein 0.3s ease;
 }
@@ -181,7 +173,7 @@ ul {
   display: inline-block;
   cursor: pointer;
   color: #c92200;
-  font-family: 'Lato';
+  font-family:'Lato'; sans-serif;
   font-size: 15px;
   font-weight: bold;
   padding: 6px 24px;
@@ -203,7 +195,7 @@ ul {
 }
 
 div.mine, div.mine:hover {
-  background: no-repeat center/60% url("images/bomb.svg") darkred;
+  background: no-repeat center/60% url("images/bomb.svg") saddlebrown;
 }
 
 div.hidden {
@@ -250,3 +242,4 @@ div.marked, div.marked:hover {
     transform: scale(1);
   }
 }
+
