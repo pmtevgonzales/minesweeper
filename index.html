@@ -51,22 +51,12 @@
       <source src="media/win-game-sound.mp3"/>
     </audio>
 
-    <div id= "message">
-      <p>
-        <span id= "playGame"></span><span id= "playAgain"></span>
-      </p>
-      <button id= "resetGame" class= "resetGameBtn"> Reset Game</button>
-    </div>
+    <div id= "message"></div>
+    <button id= "resetGame" onclick="resetBoard()" class= "hide resetGameBtn"> Reset Game</button>
       
-    <div id= "notes">
-      <div>
-        <p>
-          <span id="totalBombs"></span><span id="bombsRemaining"></span>
-        </p>
-        <button id= "remainingMinesButton" class= "hide remainingMinesBtn">Remaining terrorist bomb</button>
-      </div>
-    </div>
+    <div id= "notes"></div>
 
     <div class="board"></div>
+    
   </body>
 </html>
